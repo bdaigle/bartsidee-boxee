@@ -16,23 +16,23 @@ Follow these steps to get access to the repo:
 #### Issues
 If you have any issues with the applications or the repo, please use the github issue tracker.
 
+Feel also free to suggest fixes and pull requests, especially for the bartsidee.tv modules as they can be updated dynamically. For more information about the BartsideeTV module architecture look [here](https://github.com/bartsidee/bartsidee-boxee/wiki/BartsideeTv-Modules).
+
+If you encounter any problems with any of the apps in the repo, it could be of great help to include your log output with the issue. 
+
+_Settings_    
+First make sure you have set the log output to _notice_ level:
+_Boxee Main Menu -> Settings -> Advanced -> Debug Level -> Notice_
+
+_Platform_    
+For the boxee platforme versions (pc/mac/linux) you can just copy your log from you boxee userdata. You can find the correct directory for your installation [here](http://support.boxee.tv/entries/44149-send-your-userdata-to-boxee-support).
+
+_Boxee Box_    
+For the boxee box you can not access the filesystem, so you have to get it from a special debug webpage. In your browser open the following link:    
+"Your boxee ip":8080       
+    
+Press "get latest", and download the latest archive found in the list.
+
 #### Boxee Installer
 Find the EOL installers for OSX, Windows and Linux [here](https://github.com/bartsidee/boxee-packages/.)
 
-#### Application Logs
-If you encounter any problems with any of my apps in the repo, it could be of good use to send your log details. It is much easier to debug the problem this way.
-
-_Settings_    
-First make sure you have set the logging to notice level to make sure any is actually logged at the time of the problem.
-Boxee Main Menu -> Settings -> Advanced -> Debug Level -> Notice
-
-_Platform_    
-For the boxee platforme versions (pc/mac/linux) you can just copy your log from you boxee userdata. You can find the correct directory for your installation here: Boxee support
-
-_Boxee Box_    
-For the boxee box you can not access the filesystem, so you have to get it from a special debug webpage. In your browser open the following link and replace "your boxee ip" with the ip address of your boxee box:    
-"Your boxee ip":8080       
-    
-Press get latest, and download the latest archive found in the list.
-
-You can just includes this with your mail, it will help out big time.
