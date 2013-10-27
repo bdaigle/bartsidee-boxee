@@ -1,5 +1,7 @@
 ## Bartsidee Boxee Repository
 
+This is a boxee repository developed by bartsidee
+
 #### Installation
 Follow these steps to get access to the repo:
 
@@ -36,3 +38,6 @@ Press "get latest", and download the latest archive found in the list.
 #### Boxee Installer
 Find the EOL installers for OSX, Windows and Linux [here](https://github.com/bartsidee/boxee-packages/.)
 
+***
+
+[![Donate](https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info%40bartsidee%2enl)
