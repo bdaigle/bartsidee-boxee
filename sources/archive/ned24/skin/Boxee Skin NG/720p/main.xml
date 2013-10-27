@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+   <window type="window" id="14000">
+   <defaultcontrol always="true">51</defaultcontrol>
+   <allowoverlay>no</allowoverlay>
+   <controls>
+   	<include>Common_Background</include>
+       <control type="image">
+             <posx>0</posx>
+             <posy>0</posy>
+             <width>1280</width>
+             <height>720</height>
+             <texture>background.png</texture>
+        </control>
+	<control type="label" id="30">
+        <posx>570</posx>
+        <posy>66</posy>
+        <width>800</width>
+        <height>56</height>
+        <align>left</align>
+    	<aligny>center</aligny>
+    	<font>title28b</font>
+    	<textcolor>white</textcolor>
+    	<label>$INFO[Container(50).ListItem.Label]</label>
+	</control>
+   <control type="group" id="1200">
+        <animation type="Conditional" condition="Window.IsVisible(DialogProgress.xml)">
+	        <effect type="fade" start="100" end="20" time="200"/>
+        </animation>
+		<control type="list" id="50">
+			<enable>false</enable>
+			<visible>false</visible>
+		</control>
+		<control type="list" id="51">
+			<include>BrowseListAnimation</include>
+			<preloaditems>2</preloaditems>
+			<posx>800</posx>
+			<posy>140</posy>
+			<width>400</width>
+			<height>528</height>
+			<onleft>8000</onleft>
+			<onright>7000</onright>
+			<onup>6000</onup>
+			<ondown>1000</ondown>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<orientation>vertical</orientation>
+			<focusposition>6</focusposition>
+			<offsety>4</offsety>
+			<itemlayout height="40">
+				<control type="label">
+					<posx>36</posx>
+					<posy>0</posy>
+					<width>620</width>
+					<height>40</height>
+					<font>font22</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>grey</textcolor>
+					<selectedcolor>grey</selectedcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="40">
+				<control type="image">
+					<visible>Control.HasFocus(51)</visible>
+					<posx>0</posx>
+					<posy>-19</posy>
+					<width>400</width>
+					<height>78</height>
+					<texture border="39">line_view_on.png</texture>
+				</control>
+					<control type="label">
+						<posx>36</posx>
+						<posy>0</posy>
+						<width>620</width>
+						<height>40</height>
+						<font>font22b</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+					</control>
+			</focusedlayout>
+			<content type="url" url="">
+			<onclick lang="python"><![CDATA[
+import mc, re
+list = mc.GetWindow(14000).GetList(51)
+listitems = list.GetItems()
+listitem = listitems[list.GetFocusedItem()]
+data = mc.Http().Get(listitem.GetPath())
+url = re.compile('<Ref HREF="(.*?)" />', re.DOTALL + re.IGNORECASE).search(data).group(1)
+player = mc.GetPlayer()
+list_item       = mc.ListItem(mc.ListItem.MEDIA_VIDEO_CLIP)
+list_item.SetPath(url)
+list_item.SetReportToServer(False)
+list_item.SetAddToHistory(False)
+list_item.SetLabel(str(listitem.GetLabel()))
+player.Play(list_item)
+]]></onclick>
+			</content>
+		</control>
+
+      <control type="image">
+          <posx>40</posx>
+          <posy>100</posy>
+          <width>270</width>
+          <height>250</height>
+          <aspectratio aligny="bottom">keep</aspectratio>
+          <info>Container(51).ListItem.Thumb</info>
+
+        </control>
+        <control type="image">
+         <posx>40</posx>
+          <posy>351</posy>
+          <width>270</width>
+          <height>250</height>
+          <info>Container(51).ListItem.Thumb</info>
+          <texture flipy="true" diffuse="DiffuseMirror.png" />
+          <aspectratio aligny="top">keep</aspectratio>
+        </control>
+
+           <control type="label">
+              <visible>true</visible>
+              <posx>340</posx>
+              <posy>190</posy>
+              <width>360</width>
+              <height>500</height>
+              <font>font20</font>
+              <align>left</align>
+              <aligny>top</aligny>
+              <label>$INFO[Container(51).ListItem.property(description)]</label>
+              <background>grey</background>
+              <textcolor>white</textcolor>
+              <wrapmultiline>true</wrapmultiline>
+           </control>
+
+
+      </control>
+   </controls>
+</window>

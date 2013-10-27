@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<window type="dialog" id="16000">
+        <defaultcontrol always="true">61</defaultcontrol>
+        <allowoverlay>no</allowoverlay>
+        <onload lang="python">
+<![CDATA[
+window = mc.GetWindow(16000)
+
+app.GetCountry()
+app.GetGenre()
+
+]]>
+        </onload>
+		<controls>
+                <control type="image">
+					<description>background image overlay</description>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" time="200" delay="0"/>
+					</animation>
+					<animation type="WindowClose">
+						<effect type="fade" start="100" end="0" time="200" delay="0"/>
+					</animation>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture>background-dialog.png</texture>
+				</control>
+                <control type="label">
+					<posx>370</posx>
+					<posy>170</posy>
+					<width>350</width>
+					<height>35</height>
+					<font>font30b</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>Podcast Settings:</label>
+					<textcolor>black</textcolor>
+				</control>
+				
+                <control type="label">
+					<posx>390</posx>
+					<posy>250</posy>
+					<width>250</width>
+					<height>26</height>
+					<font>font25</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>Country:</label>
+					<textcolor>darkgrey</textcolor>
+				</control>
+
+				<control type="group" id="7001">
+					<control type="wraplist" id="61">
+						<include>BrowseListAnimation</include>
+						<preloaditems>2</preloaditems>
+						<posx>400</posx>
+						<posy>280</posy>
+						<width>500</width>
+						<height>69</height>
+						<ondown>62</ondown>
+						<scrolltime>400</scrolltime>
+						<pagecontrol>60</pagecontrol>
+						<focusposition>1</focusposition>
+						<orientation>horizontal</orientation>
+						<offsetx>10</offsetx>
+						<offsety>10</offsety>
+										
+						<itemlayout width="200" height="40">
+							<control type="label">
+								<posx>20</posx>
+								<posy>7</posy>
+								<width>190</width>
+								<height>26</height>
+								<font>font20</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ff777777</textcolor>
+							</control>
+						</itemlayout>
+
+						<focusedlayout width="200" height="40">
+							<control type="image">
+								<visible>Control.HasFocus(61)</visible>
+								<posx>-80</posx>
+								<posy>3</posy>
+								<width>200</width>
+								<height>40</height>
+								<texture>focusrow2.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<visible>!Control.HasFocus(61)</visible>
+								<posx>-80</posx>
+								<posy>3</posy>
+								<width>200</width>
+								<height>40</height>
+								<texture>focusrow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+
+							<control type="label">
+								<posx>20</posx>
+								<posy>7</posy>
+								<width>190</width>
+								<height>26</height>
+								<font>font20</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ff333333</textcolor>
+							</control>
+						</focusedlayout>
+
+						<content type="url" url="">
+							<onclick></onclick>
+						</content>
+					</control>
+					
+					<control type="label">
+						<posx>390</posx>
+						<posy>350</posy>
+						<width>190</width>
+						<height>26</height>
+						<font>font25</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>Genre:</label>
+						<textcolor>darkgrey</textcolor>
+					</control>			
+					
+					
+					<control type="wraplist" id="62">
+						<include>BrowseListAnimation</include>
+						<preloaditems>2</preloaditems>
+						<posx>400</posx>
+						<posy>380</posy>
+						<width>500</width>
+						<height>69</height>
+						<onup>61</onup>
+						<ondown>303</ondown>
+						<scrolltime>400</scrolltime>
+						<pagecontrol>60</pagecontrol>
+						<focusposition>1</focusposition>
+						<orientation>horizontal</orientation>
+						<offsetx>10</offsetx>
+						<offsety>10</offsety>
+										
+						<itemlayout width="200" height="40">
+							<control type="label">
+								<posx>20</posx>
+								<posy>7</posy>
+								<width>190</width>
+								<height>26</height>
+								<font>font20</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ff777777</textcolor>
+							</control>
+						</itemlayout>
+
+						<focusedlayout width="200" height="40">
+							<control type="image">
+								<visible>Control.HasFocus(62)</visible>
+								<posx>-80</posx>
+								<posy>3</posy>
+								<width>200</width>
+								<height>40</height>
+								<texture>focusrow2.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<visible>!Control.HasFocus(62)</visible>
+								<posx>-80</posx>
+								<posy>3</posy>
+								<width>200</width>
+								<height>40</height>
+								<texture>focusrow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+
+							<control type="label">
+								<posx>20</posx>
+								<posy>7</posy>
+								<width>190</width>
+								<height>26</height>
+								<font>font20</font>
+								<align>center</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>ff333333</textcolor>
+							</control>
+						</focusedlayout>
+
+						<content type="url" url="">
+							<onclick></onclick>
+						</content>
+					</control>
+
+                    <control type="button" id="303">
+						<posx>800</posx>
+						<posy>510</posy>
+						<width>128</width>
+						<height>55</height>
+						<label>SAVE</label>
+						<font>font22b</font>
+                        <align>center</align>
+						<aligny>center</aligny>
+						<textcolor>lightgrey</textcolor>
+                        <focusedcolor>black</focusedcolor>
+                        <aspectratio>stretch</aspectratio>
+						<texturefocus border="5">button_on.png</texturefocus>
+						<texturenofocus border="5">button_off.png</texturenofocus>
+                        <onup>62</onup>
+						<onclick lang="python">
+<![CDATA[
+list = window.GetList(61)
+listitems = list.GetItems()
+listitem = listitems[list.GetFocusedItem()]
+country = listitem.GetPath()
+
+list = window.GetList(62)
+listitems = list.GetItems()
+listitem = listitems[list.GetFocusedItem()]
+genre = listitem.GetPath()
+
+config = mc.GetApp().GetLocalConfig()
+config.SetValue("country", country)
+config.SetValue("genre", genre)
+xbmc.executebuiltin("Dialog.Close(16000)")
+mc.ActivateWindow(14444)
+app.ShowNet()
+]]>
+                        </onclick>
+					</control>
+				</control>
+		</controls>
+</window>

@@ -1,0 +1,131 @@
+{
+    "name": "Bartsidee TV Repo",
+    "modules": [
+        {
+            "name": "youtube",
+            "version": 4,
+            "country": "",
+            "desc": "Online video's from Youtube"
+        },
+        {
+            "name": "animefreak",
+            "version": 3,
+            "country": "",
+            "desc": "Different anime shows from AnimeFreak \n not all streams will work."
+        },
+        {
+            "name": "ard",
+            "version": 6,
+            "country": "DE",
+            "desc": "Catch-up service from ARD, German"
+        },
+        {
+            "name": "zdf",
+            "version": 3,
+            "country": "DE",
+            "desc": "Catch-up service from ZDF, German"
+        },
+        {
+            "name": "bbc",
+            "version": 3,
+            "country": "UK",
+            "desc": "Catch-up service from BBC, English \n You will need an UK ip-address or VPN"
+        },
+        {
+            "name": "itv",
+            "version": 3,
+            "country": "UK",
+            "desc": "Catch-up service from ITV, English \n You will need an UK ip-address or VPN"
+        },
+        {
+            "name": "hulu",
+            "version": 6,
+            "country": "US",
+            "desc": "Free to watch shows from hulu.com \n You will need an US ip-address or VPN"
+        },
+        {
+            "name": "nl24",
+            "version": 2,
+            "country": "NL",
+            "desc": "Live TV from multiple Dutch Public Stations"
+        },
+        {
+            "name": "net5",
+            "version": 9,
+            "country": "NL",
+            "desc": "Catch-up service from NET5, Dutch"
+        },
+        {
+            "name": "sbs6",
+            "version": 12,
+            "country": "NL",
+            "desc": "Catch-up service from SBS6, Dutch"
+        },
+        {
+            "name": "veronica",
+            "version": 9,
+            "country": "NL",
+            "desc": "Catch-up service from Veronica, Dutch"
+        },
+        {
+            "name": "rtl",
+            "version": 22,
+            "country": "NL",
+            "desc": "Catch-up service from RTL, Dutch"
+        },
+        {
+            "name": "uzg",
+            "version": 6,
+            "country": "NL",
+            "desc": "Catch-up service from NPO, Dutch"
+        },
+        {
+            "name": "eredivisie",
+            "version": 3,
+            "country": "NL",
+            "desc": "Video fragments of the Dutch football competition"
+        },
+        {
+            "name": "svt",
+            "version": 3,
+            "country": "SE",
+            "desc": "Catch-up service from SVT, Swedish"
+        },
+        {
+            "name": "tv3play",
+            "version": 2,
+            "country": "SE",
+            "desc": "Catch-up service from TV3 Play, Swedish"
+        },
+        {
+            "name": "tv6play",
+            "version": 2,
+            "country": "SE",
+            "desc": "Catch-up service from TV6 Play, Swedish"
+        },
+        {
+            "name": "tv8play",
+            "version": 2,
+            "country": "SE",
+            "desc": "Catch-up service from TV8 Play, Swedish"
+        },
+        {
+            "name": "cbc",
+            "version": 3,
+            "country": "CA",
+            "desc": "Catch-up service from CBC, Canadian"
+        },
+        {
+            "name": "een",
+            "version": 4,
+            "country": "BE",
+            "desc": "Catch-up service from Een, Belgium"
+        },
+        {
+            "name": "canvas",
+            "version": 3,
+            "country": "BE",
+            "desc": "Catch-up service from Canvas, Belgium"
+        }
+    ]
+}

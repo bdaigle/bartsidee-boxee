@@ -1,0 +1,17 @@
+<app>
+    <id>bartsidee.podcast</id>
+    <name>Podcasts</name>
+    <version>0.4</version>
+    <description>Listen to online podcast from iTunes</description>
+    <thumb>http://boxee.bartsidee.nl/img/podcast/thumb.png</thumb>
+    <repositoryid>com.bart</repositoryid>
+    <repository>http://boxee.bartsidee.nl</repository>
+    <media>music</media>
+    <copyright>bartsidee</copyright>
+    <email>info@bartsidee.nl</email>
+    <type>skin</type>
+    <startWindow>default</startWindow>
+    <platform>all</platform>
+    <minversion>0.9.14</minversion>
+</app>
+

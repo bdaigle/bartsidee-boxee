@@ -1,0 +1,16 @@
+	<app>
+		<id>bartsidee.southpark</id>
+		<name>Southpark</name>
+		<version>0.2</version>
+		<description>Bekijk afleveringen van Southpark</description>
+		<thumb>http://boxee.bartsidee.nl/apps/southpark/thumb.png</thumb>
+		<repositoryid>com.bart</repositoryid>
+		<repository>http://boxee.bartsidee.nl</repository>
+		<media>video</media>
+		<copyright>bartsidee</copyright>
+		<email>info@bartsidee.nl</email>
+		<type>skin</type>
+		<startWindow>default</startWindow>
+		<platform>all</platform>
+		<minversion>0.9.14</minversion>
+	</app>

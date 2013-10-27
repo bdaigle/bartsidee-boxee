@@ -1,0 +1,16 @@
+<app>
+    <id>bartsidee.tunein</id>
+    <name>Tune-In Radio</name>
+    <version>0.2</version>
+    <description>Listen to online radio from tune-in</description>
+    <thumb>http://boxee.bartsidee.nl/img/tunein/thumb.png</thumb>
+    <repositoryid>com.bart</repositoryid>
+    <repository>http://boxee.bartsidee.nl</repository>
+    <media>music</media>
+    <copyright>bartsidee</copyright>
+    <email>info@bartsidee.nl</email>
+    <type>skin</type>
+    <startWindow>default</startWindow>
+    <platform>all</platform>
+    <minversion>0.9.14</minversion>
+</app>

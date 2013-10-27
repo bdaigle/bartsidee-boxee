@@ -1,0 +1,14 @@
+{
+    "repositories": [
+        {
+            "name": "Official Repo",
+            "path": "http://boxee.bartsidee.nl/repo"
+        }
+    ],
+    "modules": [],
+    "subtitle": false,
+    "debug":    false,
+    "local":    false,
+    "search_dynamic": [],
+    "search_history": []
+}
