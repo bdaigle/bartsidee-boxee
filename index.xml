@@ -5,7 +5,7 @@
         <version>0.1</version>
         <description>Listen to online radio from tune-in</description>
         <thumb>http://www.bartsidee.nl/boxee/img/tunein/thumb.png</thumb>
-        <repositoryid>com.bart</repositoryid>
+        <repositoryid>bartsidee</repositoryid>
         <repository>http://boxee.bartsidee.nl</repository>
         <media>music</media>
         <copyright>bartsidee</copyright>
@@ -64,3 +64,4 @@
         <maxversion>1.0.00</maxversion>
     </app>
 </apps>
+
