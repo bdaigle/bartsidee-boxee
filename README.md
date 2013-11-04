@@ -7,7 +7,7 @@ Follow these steps to get access to the repo:
 
 1. Open the main boxee menu -> apps -> repositories
 2. Click on the plus sign on the right
-3. Type your personal repo address: **boxee.bartsidee.nl**
+3. Type your personal repo address: **boxee.bartsidee.nl** or mirror **repo.bartsidee.nl**
 
 #### Apps    
 1. [BartsideeTV](https://github.com/bartsidee/bartsidee-boxee/wiki/BartsideeTv)

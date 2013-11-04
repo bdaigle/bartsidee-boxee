@@ -1,8 +1,8 @@
 <repository>
-    <id>nl.bartsidee.boxee</id>
+    <id>bartsidee</id>
     <url>http://boxee.bartsidee.nl</url>
     <name>Bartsidee Repository</name>
     <thumb>http://boxee.bartsidee.nl/thumb.png</thumb>
-    <description>Bartsidee Repository</description>
+    <description>Bartsidee Boxee Repository</description>
 </repository>
 
