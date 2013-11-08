@@ -2,7 +2,7 @@
     <app>
         <id>bartsidee.tunein</id>
         <name>Tune-In Radio</name>
-        <version>0.1</version>
+        <version>0.2</version>
         <description>Listen to online radio from tune-in</description>
         <thumb>http://boxee.bartsidee.nl/img/tunein/thumb.png</thumb>
         <repositoryid>bartsidee</repositoryid>
@@ -18,7 +18,7 @@
     <app>
         <id>bartsidee.tv</id>
         <name>Bartsidee TV</name>
-        <version>2.03</version>
+        <version>2.04</version>
         <description>Modular framework to watch tv episodes and more!</description>
         <thumb>http://boxee.bartsidee.nl/img/tv/thumb.png</thumb>
         <repositoryid>bartsidee</repositoryid>
@@ -34,7 +34,7 @@
     <app>
         <id>bartsidee.podcast</id>
         <name>Podcasts</name>
-        <version>0.3</version>
+        <version>0.4</version>
         <description>Listen to online podcast from iTunes</description>
         <thumb>http://boxee.bartsidee.nl/img/podcast/thumb.png</thumb>
         <repositoryid>bartsidee</repositoryid>
@@ -50,7 +50,7 @@
     <app>
         <id>bartsidee.music</id>
         <name>Music Player</name>
-        <version>1.10</version>
+        <version>1.11</version>
         <description>Music player, lets you control your boxee music</description>
         <thumb>http://boxee.bartsidee.nl/img/music/thumb.png</thumb>
         <repositoryid>bartsidee</repositoryid>

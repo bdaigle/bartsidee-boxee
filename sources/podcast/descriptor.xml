@@ -4,7 +4,7 @@
     <version>0.4</version>
     <description>Listen to online podcast from iTunes</description>
     <thumb>http://boxee.bartsidee.nl/img/podcast/thumb.png</thumb>
-    <repositoryid>com.bart</repositoryid>
+    <repositoryid>bartsidee</repositoryid>
     <repository>http://boxee.bartsidee.nl</repository>
     <media>music</media>
     <copyright>bartsidee</copyright>
