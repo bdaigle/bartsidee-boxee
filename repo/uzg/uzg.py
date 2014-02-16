@@ -179,7 +179,7 @@ class Module(BARTSIDEE_MODULE):
             data = tools.urlopen(self.app, 'http://ida.omroep.nl/npoplayer/i.js', {'cache':0})
             token = re.compile('.token\s*=\s*"(.*?)"', re.DOTALL + re.IGNORECASE).search(str(data)).group(1)
             
-            data = tools.urlopen(self.app, 'http://ida.omroep.nl/odiplus/?prid='+playerid+'&puboptions=adaptive&adaptive=yes&part=1&token='+token, {'cache':0})
+            data = tools.urlopen(self.app, 'http://ida.omroep.nl/odi/?prid='+playerid+'&puboptions=adaptive&adaptive=yes&part=1&token='+token, {'cache':0})
             json_data = json.loads(data)
             if not json_data['streams'][0]:
                 mc.ShowDialogNotification("Geen stream beschikbaar...")
