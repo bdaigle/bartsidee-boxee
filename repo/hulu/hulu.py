@@ -21,7 +21,7 @@ class Module(BARTSIDEE_MODULE):
         self.name           = "Hulu"                            #Name of the channel
         self.type           = ['search', 'genre']               #Choose between 'search', 'list', 'genre'
         self.episode        = True                              #True if the list has episodes
-        self.genre          = ['Comedy', 'Drama', 'Reality and Game Shows','Action and Adventure', 'Anime', 'Family', 'News and Information', 'Science Fiction', 'Food', 'Kids', 'Music', u'Documentaries', 'Sports', 'Arts and Culture', 'Business', 'Videogames']
+        self.genre          = ['Comedy', 'Drama', 'Reality and Game Shows','Animation and Cartoons', 'Anime', 'International', 'Kids', 'Family', 'Action and Adventure', 'Food', 'Science Fiction', 'News and Information', 'Classics', 'Latino', 'Horror and Suspense', 'Documentaries', 'Korean Drama', 'Health and Wellness', 'Lifestyle', 'Sports', 'Music', 'Arts and Culture', 'Videogames', 'Gay and Lesbian']
         self.filter         = []                                #Array to add a genres to the genre section [type genre must be enabled]
         self.content_type   = 'video/x-flv'                     #Mime type of the content to be played
         self.country        = 'US'                              #2 character country id code
@@ -29,6 +29,8 @@ class Module(BARTSIDEE_MODULE):
         
         self.free           = "true"
         self.pageSize       = 16
+        
+        self.access_token   = re.compile('w.API_DONUT = \'(.*?)\';', re.DOTALL + re.IGNORECASE).search(str(tools.urlopen(self.app, self.url_base))).group(1)
 
     def Search(self, search):
         url  = self.url_base + '/browse/search?alphabet=All&family_friendly=0&closed_captioned=0&has_free=1&has_huluplus=0&has_hd=0&channel=All&subchannel=&network=All&display=Shows%20with%20full%20episodes%20only&decade=All&type=tv&view_as_thumbnail=false&block_num=0&keyword=' + quote_plus(search)
@@ -54,9 +56,9 @@ class Module(BARTSIDEE_MODULE):
             return []
 
         soup    = BeautifulSoup(data, convertEntities="xml", smartQuotesTo="xml")
-        show_id = re.compile('show\/(.*?)\?size\=', re.DOTALL + re.IGNORECASE).search(str(data)).group(1)
+        show_id = re.compile('show\/(.*?)\?region\=', re.DOTALL + re.IGNORECASE).search(str(data)).group(1)
 
-        url  = self.url_base + "/api/2.0/videos.json?free_only="+self.free+"&include_seasons=true&order=asc&shorter_cache=true&show_id="+show_id+"&sort=original_premiere_date&video_type%5B%5D=episode&video_type%5B%5D=game&items_per_page=" + str(self.pageSize) + "&position=" + str(self.pageSize * (page - 1)) + "&_user_pgid=1&_content_pgid=67&_device_id=1"
+        url  = self.url_base + "/mozart/v1.h2o/shows/videos?free_only="+self.free+"&include_seasons=true&order=asc&shorter_cache=true&show_id="+show_id+"&sort=original_premiere_date&video_type%5B%5D=episode&video_type%5B%5D=game&items_per_page=" + str(self.pageSize) + "&position=" + str(self.pageSize * (page - 1)) + "&_user_pgid=1&_content_pgid=67&_device_id=1&access_token=" + self.access_token
 
         data = tools.urlopen(self.app, url)
         json_data = json.loads(data)
@@ -82,7 +84,7 @@ class Module(BARTSIDEE_MODULE):
         return episodelist
 
     def Genre(self, genre, filter, page, totalpage):
-        url = self.url_base + '/api/2.0/shows.json?asset_scope=tv&genre='+genre.replace(" ", "+")+'&order=desc&sort=view_count_week&video_type=tv&items_per_page=' + str(self.pageSize) + '&position='+ str(self.pageSize * (page - 1)) + '&_user_pgid=1&_content_pgid=67&_device_id=1&free_only='+self.free
+        url = self.url_base + '/mozart/v1.h2o/shows?asset_scope=tv&genre='+genre.replace(" ", "+")+'&order=desc&sort=view_count_week&video_type=tv&items_per_page=' + str(self.pageSize) + '&position='+ str(self.pageSize * (page - 1)) + '&_user_pgid=1&_content_pgid=67&_device_id=1&free_only='+self.free + '&access_token=' + self.access_token
         
         data = tools.urlopen(self.app, url, {'cache':3600})
 
@@ -123,7 +125,7 @@ class Module(BARTSIDEE_MODULE):
         return tools.urlopen(self.app, url)
 
     def getGenres(self):
-        url  = self.url_base + "/api/2.0/genres.json?sort=view_count_week&type=tv&items_per_page=32&position=0&_user_pgid=1&_content_pgid=67&_device_id=1"
+        url  = self.url_base + "/mozart/v1.h2o/shows/genres?sort=view_count_week&type=tv&items_per_page=32&position=0&_user_pgid=1&_content_pgid=67&_device_id=1&access_token=" + self.access_token
         data = tools.urlopen(self.app, url, {'cache':36000})
         
         json_data = json.loads(data)
