@@ -39,7 +39,7 @@ Press "get latest", and download the latest archive found in the list.
 Find the EOL installers for OSX, Windows and Linux [here](https://github.com/bartsidee/boxee-packages/.)
 
 #### Boxee Developer Documentation
-http://web.archive.org/web/20130915042627/http://developer.boxee.tv/
+http://web.archive.org/web/20131107052139/http://developer.boxee.tv/Main_Page
 
 #### Boxee Developer signature
 http://bbx.boxee.tv/developer/
