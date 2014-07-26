@@ -27,7 +27,7 @@ class Module(BARTSIDEE_MODULE):
         self.country        = 'US'                              #2 character country id code
         
         
-        self.free           = "true"
+        self.free           = "1"
         self.pageSize       = 16
         
         self.access_token   = re.compile('w.API_DONUT = \'(.*?)\';', re.DOTALL + re.IGNORECASE).search(str(tools.urlopen(self.app, self.url_base))).group(1)
@@ -58,7 +58,7 @@ class Module(BARTSIDEE_MODULE):
         soup    = BeautifulSoup(data, convertEntities="xml", smartQuotesTo="xml")
         show_id = re.compile('show\/(.*?)\?region\=', re.DOTALL + re.IGNORECASE).search(str(data)).group(1)
 
-        url  = self.url_base + "/mozart/v1.h2o/shows/videos?free_only="+self.free+"&include_seasons=true&order=asc&shorter_cache=true&show_id="+show_id+"&sort=original_premiere_date&video_type%5B%5D=episode&video_type%5B%5D=game&items_per_page=" + str(self.pageSize) + "&position=" + str(self.pageSize * (page - 1)) + "&_user_pgid=1&_content_pgid=67&_device_id=1&access_token=" + self.access_token
+        url  = self.url_base + "/mozart/v1.h2o/shows/videos?free_only="+self.free+"&include_seasons=true&order=asc&shorter_cache=true&show_id="+show_id+"&sort=seasons_and_release&video_type%5B%5D=episode&video_type%5B%5D=game&items_per_page=" + str(self.pageSize) + "&position=" + str(self.pageSize * (page - 1)) + "&_user_pgid=1&_content_pgid=67&_device_id=1&access_token=" + self.access_token
 
         data = tools.urlopen(self.app, url)
         json_data = json.loads(data)
