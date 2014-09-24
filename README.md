@@ -1,3 +1,7 @@
+**This project is not maintained anymore, feel free to copy or fork it**    
+_For boxee box user that are in search of alternatives, try to install xbmc:_
+http://boxeed.in/forums/viewtopic.php?f=13&t=263
+
 ## Bartsidee Boxee Repository
 
 This is a boxee repository developed by bartsidee
