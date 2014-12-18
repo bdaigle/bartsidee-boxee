@@ -33,7 +33,7 @@ class Module(BARTSIDEE_MODULE):
         self.access_token   = re.compile('w.API_DONUT = \'(.*?)\';', re.DOTALL + re.IGNORECASE).search(str(tools.urlopen(self.app, self.url_base))).group(1)
 
     def Search(self, search):
-        url  = self.url_base + '/browse/search?alphabet=All&family_friendly=0&closed_captioned=0&has_free=1&has_huluplus=0&has_hd=0&channel=All&subchannel=&network=All&display=Shows%20with%20full%20episodes%20only&decade=All&type=tv&view_as_thumbnail=false&block_num=0&keyword=' + quote_plus(search)
+        url  = self.url_base + '/browse/search?family_friendly=0&closed_captioned=0&has_free=1&has_huluplus=0&has_hd=0&channel=All&subchannel=&network=All&display=Shows%20with%20full%20episodes%20only&decade=All&type=tv&view_as_thumbnail=false&block_num=0&keyword=' + quote_plus(search)
         data = tools.urlopen(self.app, url)
 
         data = re.compile('"show_list", "(.*?)"\)', re.DOTALL + re.IGNORECASE).search(str(data)).group(1)
